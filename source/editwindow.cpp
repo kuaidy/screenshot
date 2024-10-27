@@ -188,7 +188,7 @@ void EditWindow::CreateTab(QPixmap pixMap,QString fileName){
     widget->imageLabel->setMargin(0);
     //    connect(imagelabel,SIGNAL(mouseDoubleClickEvent(QMouseEvent*)),this,SLOT(removeSubTab(int)));
     widget->imageLabel->setObjectName(fileName);
-    //    widget->imageLabel->setStyleSheet("background:white;");
+    widget->imageLabel->setStyleSheet("background:red;");
     //    widget->imageLabel->setSizePolicy(QSizePolicy::Ignored,QSizePolicy::Ignored);
     // 图像与imgLabel同大小
     widget->imageLabel->resize(pixMap.size());
@@ -201,7 +201,7 @@ void EditWindow::CreateTab(QPixmap pixMap,QString fileName){
     //内容保持原来的大小
     widget->imageLabel->setScaledContents(false);
     //设置图像
-    widget->imageLabel->setPixmap(pixMap);
+//    widget->imageLabel->setPixmap(pixMap);
 
     scrollarea->setAlignment(Qt::AlignCenter);
     scrollarea->setWidget(widget->imageLabel);
@@ -233,7 +233,7 @@ void EditWindow::CreateNewTab(QPixmap pixMap,QString fileName){
     _imageLabel->setMargin(0);
     //connect(imagelabel,SIGNAL(mouseDoubleClickEvent(QMouseEvent*)),this,SLOT(removeSubTab(int)));
     _imageLabel->setObjectName(fileName);
-    //imageLabel->setStyleSheet("background:white;");
+    _imageLabel->setStyleSheet("background:green;");
     //imageLabel->setSizePolicy(QSizePolicy::Ignored,QSizePolicy::Ignored);
     // 图像与imgLabel同大小
 //    imageLabel->resize(pixMap.size());

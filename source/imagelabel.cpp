@@ -11,8 +11,8 @@ ImageLabel:: ~ImageLabel(){
 
 //重写鼠标按下方法
 void ImageLabel::mousePressEvent(QMouseEvent* e) {
-    sx = e->position().x();
-    sy = e->position().y();
+    sx=startX = e->position().x();
+    sy=startY = e->position().y();
     _startPoint = e->pos();
     _endPoint = e->pos();
     isOption = true;
@@ -41,8 +41,8 @@ void ImageLabel::mousePressEvent(QMouseEvent* e) {
 void ImageLabel::mouseDoubleClickEvent(QMouseEvent* e) {}
 //重写鼠标移动事件
 void ImageLabel::mouseMoveEvent(QMouseEvent* e) {
-    ex = e->position().x();
-    ey = e->position().y();
+    ex=endX = e->position().x();
+    ey=endY = e->position().y();
     switch (OptionFlag) {
         case OptionTypeEnum::PaintFreedom: {
             if(isPainting){

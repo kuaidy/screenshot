@@ -1,5 +1,5 @@
 ﻿
-#include "GlobalSetting.h"
+#include "../../include/common/globalsetting.h"
 
 GlobalSetting::GlobalSetting()
 {
